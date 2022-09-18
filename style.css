@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+section::before{
+  content: '';
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(#f3f5f5, #9c27b0);
+  position: absolute;
+  transform: translate(-130px,-130px);
+}
+section::after{
+  content: '';
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(#ff2781, #b02795dc);
+  position: absolute;
+  transform: translate(130px,130px);
+}
+.box{
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background:rgba(255,255,255, 0.1) ;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 45px rgba(0,0, 0, 0.25);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255, 0.25) ;
+  backdrop-filter: blur(25px);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+.box h3{
+  color: #c75eda;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.BatterySchap{
+  width: 120px;
+  height: 55px;
+  border: 5px solid black;
+  border-radius: 8px;
+  margin: 20px;
+  position: relative;
+}
+.BatterySchap::before{
+  content: '';
+  border: 5px solid black;
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border-radius: 3px;
+  top: 50%;
+  left: 101%;
+  transform: translateY(-50%);
+}
+.level{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.porcentage{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50%;
+  height:100% ;
+  background:linear-gradient(90deg,#9c28af,#fd2c72);
+}
+.porcent{
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ff2781;
+}
